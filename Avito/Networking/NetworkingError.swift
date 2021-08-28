@@ -18,11 +18,11 @@ extension ErrorResponse: LocalizedError {
     public var errorDescription: String? {
         switch self {
         case .badServerResponse:
-            return NSLocalizedString("Проблемы с сервером. Пожалуйста, проверьте есть ли у вас доступ к интернету", comment: "Ошибка")
+            return NSLocalizedString("Возникли проблемы с сервером. Пожалуйста, проверьте есть ли у вас доступ к интернету, а после нажмите на кнопку перезагрузки таблицы. Он расположен в правом верхнем углу", comment: "Ошибка")
         case .cantGetData:
-            return NSLocalizedString("Проблемы с получением данных", comment: "Ошибка")
+            return NSLocalizedString("Возникли проблемы с получением данных", comment: "Ошибка")
         case .badURL:
-            return NSLocalizedString("Проблемы с URL", comment: "Ошибка")
+            return NSLocalizedString("Возникли проблемы с URL", comment: "Ошибка")
         }
     }
 }

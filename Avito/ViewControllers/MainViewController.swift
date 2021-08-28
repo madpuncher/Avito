@@ -9,7 +9,7 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    //MARK: - CONSTANTS
+    //MARK: CONSTANTS
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(EmployeesCustomCell.self, forCellReuseIdentifier: EmployeesCustomCell.identifier)
@@ -35,7 +35,7 @@ class MainViewController: UIViewController {
     }
     private var filteredEmployees = [EmployeeViewModel]()
     
-    //MARK: - LIFE CYCLE
+    //MARK: LIFE CYCLE
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-        
+                
         settingUI()
         getDataEmployees()
         setupSearchBar()
@@ -54,14 +54,18 @@ class MainViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = view.bounds
+        
     }
-    
-    //MARK: - Layout and UI
+
+    //MARK: LAYOUT AND UI
     private func settingUI() {
         view.addSubview(tableView)
         tableView.backgroundColor = .white
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         tableView.separatorColor = .gray
+        
+        navigationController?.navigationBar.tintColor = .black
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "gobackward"), style: .done, target: self, action: #selector(reloadTable))
         
     }
     
@@ -75,7 +79,16 @@ class MainViewController: UIViewController {
         definesPresentationContext = true
     }
     
-    //MARK: - Download news with NetworkManager
+    
+    //MARK: RELOAD TABLE VIEW AND FETCH DATA ACTION
+    @objc private func reloadTable() {
+        if viewModels.isEmpty && filteredEmployees.isEmpty {
+            getDataEmployees()
+        }
+        self.tableView.reloadData()
+    }
+    
+    //MARK: DOWNLOAD DATA FROM DATA MANAGER
     private func getDataEmployees() {
         NetworkManager.shared.getData() { [weak self] result in
             switch result {
