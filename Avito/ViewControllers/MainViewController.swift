@@ -17,11 +17,23 @@ class MainViewController: UIViewController {
         return table
     }()
     
+    private let searchController = UISearchController(searchResultsController: nil)
+    
+    private var searchBarIsEmpty: Bool {
+        guard let text = searchController.searchBar.text else { return false }
+        return text.isEmpty
+    }
+    
+    private var isFiltering: Bool {
+        searchController.isActive && !searchBarIsEmpty
+    }
+    
     private var viewModels = [EmployeeViewModel]() {
         didSet {
             viewModels.sort(by: <)
         }
     }
+    private var filteredEmployees = [EmployeeViewModel]()
     
     //MARK: - LIFE CYCLE
     override func viewDidLoad() {
@@ -36,7 +48,7 @@ class MainViewController: UIViewController {
         
         settingUI()
         getDataEmployees()
-        
+        setupSearchBar()
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,6 +63,16 @@ class MainViewController: UIViewController {
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         tableView.separatorColor = .gray
         
+    }
+    
+    private func setupSearchBar() {
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        searchController.searchBar.delegate = self
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Введите имя работника"
+        definesPresentationContext = true
     }
     
     //MARK: - Download news with NetworkManager
@@ -95,19 +117,29 @@ class MainViewController: UIViewController {
 //MARK: DELEGATE AND DATA SOURCE TABLE VIEW
 extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModels.count
+        if isFiltering {
+            return filteredEmployees.count
+        }
+        
+        return viewModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: EmployeesCustomCell.identifier, for: indexPath) as! EmployeesCustomCell
         
-        cell.configure(with: viewModels[indexPath.row])
+        if isFiltering {
+            cell.configure(with: filteredEmployees[indexPath.row])
+        } else {
+            cell.configure(with: viewModels[indexPath.row])
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let secondVC = ProfileViewController()
-        secondVC.configure(employee: viewModels[indexPath.row])
+        let employee: EmployeeViewModel
+        employee = isFiltering ? filteredEmployees[indexPath.row] : viewModels[indexPath.row]
+        secondVC.configure(employee: employee)
         secondVC.modalPresentationStyle = .fullScreen
         present(secondVC, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -118,3 +150,14 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
+extension MainViewController: UISearchBarDelegate, UISearchResultsUpdating {
+    
+    func updateSearchResults(for searchController: UISearchController) {
+        filteredText(searchController.searchBar.text ?? "")
+    }
+    
+    private func filteredText(_ searchText: String) {
+        filteredEmployees = viewModels.filter({ $0.employeeName.lowercased().contains(searchText.lowercased())})
+        tableView.reloadData()
+    }
+}
