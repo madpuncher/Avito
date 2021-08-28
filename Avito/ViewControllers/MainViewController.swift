@@ -45,7 +45,7 @@ class MainViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
-                
+        
         settingUI()
         getDataEmployees()
         setupSearchBar()
@@ -56,7 +56,7 @@ class MainViewController: UIViewController {
         tableView.frame = view.bounds
         
     }
-
+    
     //MARK: LAYOUT AND UI
     private func settingUI() {
         view.addSubview(tableView)
@@ -85,7 +85,7 @@ class MainViewController: UIViewController {
         if viewModels.isEmpty && filteredEmployees.isEmpty {
             getDataEmployees()
         }
-        self.tableView.reloadData()
+        tableView.reloadData()
     }
     
     //MARK: DOWNLOAD DATA FROM DATA MANAGER

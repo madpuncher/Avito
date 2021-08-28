@@ -32,7 +32,7 @@ class ProfileViewController: UIViewController {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.backgroundColor = .white
-        let image = UIImage(systemName: "chevron.left")
+        let image = UIImage(systemName: "arrow.uturn.backward")
         let tintImage = image?.withRenderingMode(.alwaysTemplate)
         button.tintColor = #colorLiteral(red: 0.1215686277, green: 0.01176470611, blue: 0.4235294163, alpha: 1)
         button.setImage(tintImage, for: .normal)

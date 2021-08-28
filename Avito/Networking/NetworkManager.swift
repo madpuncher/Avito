@@ -10,7 +10,7 @@ import Foundation
 class NetworkManager {
     
     static let shared = NetworkManager()
-        
+    
     private init() {}
     
     struct ConstantAPI {
@@ -22,7 +22,6 @@ class NetworkManager {
             completion(.failure(ErrorResponse.badURL))
             return
         }
-        
         URLSession.shared.dataTask(with: url) { data, response, error in
             guard
                 let data = data,
@@ -48,5 +47,3 @@ class NetworkManager {
         .resume()
     }
 }
-
-
