@@ -8,16 +8,16 @@
 import Foundation
 
 struct EmployeeInfo: Decodable {
-    let company: Company
+    public let company: Company
 }
 
 struct Company: Decodable {
-    let name: String
-    let employees: [Employee]
+    public let name: String
+    public let employees: [Employee]
 }
 
 struct Employee: Decodable {
-    let name: String
-    let phoneNumber: String
-    let skills: [String]
+    public let name: String
+    public let phoneNumber: String
+    public let skills: [String]
 }

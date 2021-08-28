@@ -125,7 +125,7 @@ class EmployeesCustomCell: UITableViewCell {
     func configure(with viewModel: EmployeeViewModel) {
         companyLabel.text = "Компания: \(viewModel.companyName)"
         nameTitleLabel.text =  "Имя: \(viewModel.employeeName) "
-        skillLabel.text = "Навыки: подробнее в профиле"
+        skillLabel.text = "\(viewModel.skills.joined(separator: ", "))"
         phoneLabel.text = "Телефон: \(viewModel.phoneNumber)"
         newsImageView.image = UIImage(named: "Employee\(viewModel.image)")
     }
