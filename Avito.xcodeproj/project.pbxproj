@@ -9,21 +9,33 @@
 /* Begin PBXBuildFile section */
 		02808B1026DA1AC1006D1A56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B0F26DA1AC1006D1A56 /* AppDelegate.swift */; };
 		02808B1226DA1AC1006D1A56 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B1126DA1AC1006D1A56 /* SceneDelegate.swift */; };
-		02808B1426DA1AC1006D1A56 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B1326DA1AC1006D1A56 /* ViewController.swift */; };
-		02808B1726DA1AC1006D1A56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02808B1526DA1AC1006D1A56 /* Main.storyboard */; };
+		02808B1426DA1AC1006D1A56 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B1326DA1AC1006D1A56 /* ProfileViewController.swift */; };
 		02808B1926DA1AC2006D1A56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02808B1826DA1AC2006D1A56 /* Assets.xcassets */; };
 		02808B1C26DA1AC2006D1A56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02808B1A26DA1AC2006D1A56 /* LaunchScreen.storyboard */; };
+		02808B2426DA203E006D1A56 /* NameCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B2326DA203E006D1A56 /* NameCustomCell.swift */; };
+		02808B2626DA206A006D1A56 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B2526DA206A006D1A56 /* NetworkManager.swift */; };
+		02808B2826DA217B006D1A56 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B2726DA217B006D1A56 /* Employee.swift */; };
+		02808B2A26DA2792006D1A56 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B2926DA2792006D1A56 /* MainViewController.swift */; };
+		02808B2C26DA27ED006D1A56 /* EmployeesCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B2B26DA27ED006D1A56 /* EmployeesCustomCell.swift */; };
+		02808B2E26DA29CA006D1A56 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B2D26DA29CA006D1A56 /* EmployeeViewModel.swift */; };
+		02808B3626DA5A89006D1A56 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02808B3526DA5A89006D1A56 /* NetworkingError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02808B0C26DA1AC1006D1A56 /* Avito.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Avito.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02808B0F26DA1AC1006D1A56 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02808B1126DA1AC1006D1A56 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		02808B1326DA1AC1006D1A56 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02808B1626DA1AC1006D1A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		02808B1326DA1AC1006D1A56 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		02808B1826DA1AC2006D1A56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02808B1B26DA1AC2006D1A56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02808B1D26DA1AC2006D1A56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02808B2326DA203E006D1A56 /* NameCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameCustomCell.swift; sourceTree = "<group>"; };
+		02808B2526DA206A006D1A56 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		02808B2726DA217B006D1A56 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		02808B2926DA2792006D1A56 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		02808B2B26DA27ED006D1A56 /* EmployeesCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeesCustomCell.swift; sourceTree = "<group>"; };
+		02808B2D26DA29CA006D1A56 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		02808B3526DA5A89006D1A56 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +68,69 @@
 		02808B0E26DA1AC1006D1A56 /* Avito */ = {
 			isa = PBXGroup;
 			children = (
-				02808B0F26DA1AC1006D1A56 /* AppDelegate.swift */,
-				02808B1126DA1AC1006D1A56 /* SceneDelegate.swift */,
-				02808B1326DA1AC1006D1A56 /* ViewController.swift */,
-				02808B1526DA1AC1006D1A56 /* Main.storyboard */,
-				02808B1826DA1AC2006D1A56 /* Assets.xcassets */,
-				02808B1A26DA1AC2006D1A56 /* LaunchScreen.storyboard */,
+				02808B2F26DA2C8D006D1A56 /* Source */,
+				02808B3426DA2CBF006D1A56 /* Networking */,
+				02808B3026DA2CA3006D1A56 /* ViewControllers */,
+				02808B3126DA2CAB006D1A56 /* ViewModels */,
+				02808B3226DA2CB5006D1A56 /* Views */,
+				02808B3326DA2CB9006D1A56 /* Models */,
 				02808B1D26DA1AC2006D1A56 /* Info.plist */,
 			);
 			path = Avito;
+			sourceTree = "<group>";
+		};
+		02808B2F26DA2C8D006D1A56 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				02808B0F26DA1AC1006D1A56 /* AppDelegate.swift */,
+				02808B1126DA1AC1006D1A56 /* SceneDelegate.swift */,
+				02808B1826DA1AC2006D1A56 /* Assets.xcassets */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		02808B3026DA2CA3006D1A56 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				02808B2926DA2792006D1A56 /* MainViewController.swift */,
+				02808B1326DA1AC1006D1A56 /* ProfileViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		02808B3126DA2CAB006D1A56 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				02808B2D26DA29CA006D1A56 /* EmployeeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		02808B3226DA2CB5006D1A56 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02808B2B26DA27ED006D1A56 /* EmployeesCustomCell.swift */,
+				02808B2326DA203E006D1A56 /* NameCustomCell.swift */,
+				02808B1A26DA1AC2006D1A56 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		02808B3326DA2CB9006D1A56 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				02808B2726DA217B006D1A56 /* Employee.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		02808B3426DA2CBF006D1A56 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				02808B2526DA206A006D1A56 /* NetworkManager.swift */,
+				02808B3526DA5A89006D1A56 /* NetworkingError.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +192,6 @@
 			files = (
 				02808B1C26DA1AC2006D1A56 /* LaunchScreen.storyboard in Resources */,
 				02808B1926DA1AC2006D1A56 /* Assets.xcassets in Resources */,
-				02808B1726DA1AC1006D1A56 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,23 +202,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02808B1426DA1AC1006D1A56 /* ViewController.swift in Sources */,
+				02808B2A26DA2792006D1A56 /* MainViewController.swift in Sources */,
+				02808B1426DA1AC1006D1A56 /* ProfileViewController.swift in Sources */,
+				02808B2C26DA27ED006D1A56 /* EmployeesCustomCell.swift in Sources */,
+				02808B2826DA217B006D1A56 /* Employee.swift in Sources */,
+				02808B3626DA5A89006D1A56 /* NetworkingError.swift in Sources */,
+				02808B2E26DA29CA006D1A56 /* EmployeeViewModel.swift in Sources */,
 				02808B1026DA1AC1006D1A56 /* AppDelegate.swift in Sources */,
+				02808B2626DA206A006D1A56 /* NetworkManager.swift in Sources */,
 				02808B1226DA1AC1006D1A56 /* SceneDelegate.swift in Sources */,
+				02808B2426DA203E006D1A56 /* NameCustomCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		02808B1526DA1AC1006D1A56 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02808B1626DA1AC1006D1A56 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		02808B1A26DA1AC2006D1A56 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SAY4Y2DWXX;
 				INFOPLIST_FILE = Avito/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = SAY4Y2DWXX;
 				INFOPLIST_FILE = Avito/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
