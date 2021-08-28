@@ -59,22 +59,3 @@ class NameCustomCell: UITableViewCell {
         nameEmployeeLabel.text = employee.employees[indexPath.row].name
     }
 }
-
-//MARK: Setup Canvas
-import SwiftUI
-
-struct nameCellProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView()
-            .edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> some UIViewController {
-            ProfileViewController()
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
-    }
-}

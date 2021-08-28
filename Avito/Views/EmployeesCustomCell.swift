@@ -130,23 +130,3 @@ class EmployeesCustomCell: UITableViewCell {
         newsImageView.image = UIImage(named: "Employee\(viewModel.image)")
     }
 }
-
-//MARK: Setup Canvas
-import SwiftUI
-
-struct CellProvider: PreviewProvider {
-    static var previews: some View {
-        ContainerView()
-            .edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        func makeUIViewController(context: Context) -> some UIViewController {
-            MainViewController()
-        }
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-            
-        }
-    }
-}
-

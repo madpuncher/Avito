@@ -121,7 +121,10 @@ class ProfileViewController: UIViewController {
         label.font = .systemFont(ofSize: 25, weight: .semibold)
         label.textColor = .black
         label.numberOfLines = 2
-        label.backgroundColor = #colorLiteral(red: 0.8374180198, green: 0.8374378085, blue: 0.8374271393, alpha: 1)
+        label.backgroundColor = #colorLiteral(red: 0.921431005, green: 0.9214526415, blue: 0.9214410186, alpha: 0.7375849698)
+        label.textAlignment = .center
+        label.layer.cornerRadius = 10
+        label.clipsToBounds = true
         return label
     }()
     
@@ -154,7 +157,8 @@ class ProfileViewController: UIViewController {
         workPlaceLabel.text = "Работает в \(employee.companyName)"
         employeeImageView.image = UIImage(named: "Employee\(employee.image)")
         scoreButton.setTitle("\(employee.scoreFirst).\(employee.scoreSecond)", for: .normal)
-        skillsLabel.text = employee.skills.joined(separator: " ")
+        skillsLabel.text = "  \(employee.skills.joined(separator: ", "))  "
+        
     }
 
     private func setupConstraints() {
@@ -204,6 +208,8 @@ class ProfileViewController: UIViewController {
             
             skillsLabel.topAnchor.constraint(equalTo: skillsLabelName.bottomAnchor, constant: 20),
             skillsLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            skillsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            skillsLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant:-16),
             
             footerViewSecond.topAnchor.constraint(equalTo: skillsLabel.bottomAnchor, constant: 30),
         ])
