@@ -157,6 +157,7 @@ extension MainViewController: UITableViewDelegate, UITableViewDataSource {
         employee = isFiltering ? filteredEmployees[indexPath.row] : viewModels[indexPath.row]
         secondVC.configure(employee: employee)
         secondVC.modalPresentationStyle = .fullScreen
+        secondVC.modalTransitionStyle = .flipHorizontal
         present(secondVC, animated: true, completion: nil)
         tableView.deselectRow(at: indexPath, animated: true)
     }
