@@ -13,7 +13,7 @@ class MainViewController: UIViewController {
     private let tableView: UITableView = {
         let table = UITableView()
         table.register(EmployeesCustomCell.self, forCellReuseIdentifier: EmployeesCustomCell.identifier)
-        
+        table.tableFooterView = UIView()
         return table
     }()
     
@@ -85,12 +85,15 @@ class MainViewController: UIViewController {
                 })
                 
                 //MARK: GENERATE RANDOM ID FOR CUSTOM PHOTO
-                for index in 1...7 {
-                    let randomScore1 = Int.random(in: 3...4)
-                    let randomScore2 = Int.random(in: 0...9)
-                    self?.viewModels[index - 1].image = index
-                    self?.viewModels[index - 1].scoreFirst = randomScore1
-                    self?.viewModels[index - 1].scoreSecond = randomScore2
+                if self?.viewModels.isEmpty == false {
+                    //MARK: SAFE UNWRAP ( 0 OR 100 ALWAYS WILL BE WORK )
+                    for index in 1...(self?.viewModels.count)! {
+                        let randomScore1 = Int.random(in: 3...4)
+                        let randomScore2 = Int.random(in: 0...9)
+                        self?.viewModels[index - 1].image = index
+                        self?.viewModels[index - 1].scoreFirst = randomScore1
+                        self?.viewModels[index - 1].scoreSecond = randomScore2
+                    }
                 }
                 
                 DispatchQueue.main.async {

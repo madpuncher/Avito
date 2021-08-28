@@ -98,11 +98,11 @@ class ProfileViewController: UIViewController {
     private let buttonOpen: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle("ОТКРЫТЬ", for: .normal)
+        button.setTitle("СВЯЗАТЬСЯ", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.backgroundColor = #colorLiteral(red: 0.4075328112, green: 0.7300835252, blue: 0.6573699117, alpha: 1)
         button.layer.cornerRadius = 15
-        button.titleLabel?.font = .systemFont(ofSize: 19, weight: .heavy)
+        button.titleLabel?.font = .systemFont(ofSize: 18, weight: .heavy)
         return button
     }()
     
